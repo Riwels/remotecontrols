@@ -1,0 +1,25 @@
+#summary Code sample for Arduino IDE
+#labels Phase-Implementation,Featured,Phase-Deploy
+
+= Introduction =
+
+With this sample, you can see the pressed button value in the serial monitor.
+
+It uses the Arduino digital pin 12 for the infrared receiver.
+
+
+= Code =
+
+{{{
+#include <RemoteControls.h>
+
+RemoteControl rc(12,true); //Declaration using pin 12 and debug enabled
+
+void setup(){
+  Serial.begin(115200);    //Start serial communications
+}
+
+void loop(){
+  rc.PressedButton();      //This returns the value. Now it's just shown via serial
+}                          //nothing more is needed for that
+}}}

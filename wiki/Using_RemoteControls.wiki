@@ -2,7 +2,7 @@
 = Introduction =
 
 With this sample, you can assign any work to the pressed buttons. You should know the values from your remote controllerm before use this code.
-Check the Sample_Arduino_IDE or Sample_Atmel_Studio to get this values.
+Check the Sample_Atmel_Studio or Sample_Arduino_IDE to get this values.
 
 It uses the Arduino digital pin 12 for the infrared receiver and debug mode will be off, because we know the values.
 

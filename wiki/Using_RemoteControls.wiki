@@ -1,7 +1,7 @@
 #labels Featured,Phase-Deploy,Phase-Implementation
 = Introduction =
 
-With this sample, you can assign any work to the pressed buttons. You should know the values from your remote controllerm before use this code.
+With this sample, you can assign any work to the pressed buttons. You should know the values from your remote controller, before use this code.
 Check the Sample_Atmel_Studio or Sample_Arduino_IDE to get this values.
 
 It uses the Arduino digital pin 12 for the infrared receiver and debug mode will be off, because we know the values.
@@ -26,7 +26,7 @@ void setup(){
 }
 
 void loop(){
-  KeyWork(rc.PressedButton()); // Call of our woks function with the pressed key value
+  KeyWork(rc.PressedButton()); // Call of our works function with the pressed key value
 }
 //-------------------------------------------------------
 void KeyWork(uint8_t value){

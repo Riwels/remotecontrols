@@ -11,6 +11,13 @@ It uses the Arduino digital pin 12 for the infrared receiver.
 = Code =
 
 {{{
+// Definitions to use in library. Add it BEFORE the library include
+#define Pulses             32
+#define MaxWaitingTime 100000
+#define FirstPulseLength 4000
+#define HighPulseLength  1400
+#define LowPulseLength	  300
+
 #include <RemoteControls.cpp>  // INCLUDE .CPP INSTEAD OF .H
 
 RemoteControl rc(12,true); //Declaration using pin 12 and debug enabled

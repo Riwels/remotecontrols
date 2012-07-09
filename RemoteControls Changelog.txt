@@ -1,0 +1,19 @@
+	RemoteControls Arduino Library
+ ------------------------------------------------------------------------------
+|	Author:				Riwels												   |
+|	Starting date:		30/06/2012											   |
+|	Last update:		30/06/2012											   |
+|	Current version:	1.0.0												   |
+ ------------------------------------------------------------------------------
+
+ //----------------------------------------------------------------------------//
+  00/00/0000 Update:
+  - 
+ 
+//----------------------------------------------------------------------------//
+ 14/06/2012	Initial release:
+ Library to add infrared remote controller support, to Arduino boards, using an
+IR LED receiver and a standard remote controller. 
+Made and tested with an AverMedia RM-KV and a 21 keys chinese rc.
+
+It takes the bits from the high pulses and returns the value from the last 8 bits.

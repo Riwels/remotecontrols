@@ -33,6 +33,11 @@
 #define LowPulseLength 300
 #endif
 
+#ifndef GetValuesFrom
+#warning: GetValuesFrom not defined. Default is HIGH
+#define GetValuesFrom HIGH
+#endif
+
 #include <Arduino.h>
 
 class RemoteControl{

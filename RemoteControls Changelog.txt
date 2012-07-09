@@ -2,14 +2,15 @@
  ------------------------------------------------------------------------------
 |	Author:				Riwels												   |
 |	Starting date:		30/06/2012											   |
-|	Last update:		30/06/2012											   |
-|	Current version:	1.0.0												   |
+|	Last update:		09/07/2012											   |
+|	Current version:	1.0.0.1												   |
  ------------------------------------------------------------------------------
 
- //----------------------------------------------------------------------------//
-  00/00/0000 Update:
-  - 
- 
+//----------------------------------------------------------------------------//
+09/07/2012 Update:
+ - Removed an unused method.
+ - Added definition to allow get values from both LOW and HIGH pulses.
+
 //----------------------------------------------------------------------------//
  14/06/2012	Initial release:
  Library to add infrared remote controller support, to Arduino boards, using an

@@ -24,6 +24,7 @@ It uses the Arduino digital pin 12 for the infrared receiver and debug mode will
 #define KEY_BACK   29
 #define KEY_OK     45
 
+#include <Arduino.h>
 #include <RemoteControls.cpp> // AtmelStudio users add .cpp
 
 
@@ -36,7 +37,7 @@ void setup(){
 }
 
 void loop(){
-  KeyWork(rc.PressedButton()); // Call our works function with the pressed key value
+  KeyWork((uint8_t)rc.PressedButton()); // Call our works function with the pressed key value
 }
 //-------------------------------------------------------
 void KeyWork(uint8_t value){

@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Arduino IDE has a bug with the defines and it makes useless the library as it is. 
+Arduino IDE has a bug with the defines and it makes useless the library as it is.
 I recommend you to switch from ArduinoIDE to Atmel Studio 6.
 
 Atmel Studio 6 can be downloaded for free at Atmel's website.

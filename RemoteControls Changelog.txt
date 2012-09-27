@@ -2,14 +2,23 @@
  ------------------------------------------------------------------------------
 |	Author:				Riwels												   |
 |	Starting date:		30/06/2012											   |
-|	Last update:		09/07/2012											   |
-|	Current version:	1.0.0.1												   |
+|	Last update:		27/09/2012											   |
+|	Current version:	1.0.0.2												   |
  ------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------//
+27/09/2012 Update:
+ - Debug mode is now enabled by "#define RemoteControlDebug" instead of a
+   boolean in the constructor.
+ - Debug mode is now a step-by-step app to help to get the pulses width and
+   values from the remote controller.
+ - Optimized size when not using debug mode.
 
 //----------------------------------------------------------------------------//
 09/07/2012 Update:
  - Removed an unused method.
- - Added definition to allow get values from both LOW and HIGH pulses.
+ - Added definition to allow get values from LOW or HIGH pulses.
 
 //----------------------------------------------------------------------------//
  14/06/2012	Initial release:

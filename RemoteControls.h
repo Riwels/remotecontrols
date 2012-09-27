@@ -8,6 +8,10 @@
 #ifndef REMOTECONTROLS_H_
 #define REMOTECONTROLS_H_
 
+
+//#define RemoteControlDebug	// ArduinoIDE users, uncomment to set debug mode
+
+#ifndef RemoteControlDebug
 #ifndef Pulses
 #warning: Pulses not defined. Default is 32
 #define Pulses 32
@@ -37,21 +41,32 @@
 #warning: GetValuesFrom not defined. Default is HIGH
 #define GetValuesFrom HIGH
 #endif
+#endif	//RemoteControlDebug
 
 #include <Arduino.h>
 
 class RemoteControl{
 	public:
-		RemoteControl(uint8_t IRSensorPin,bool EnableDebug);
-		uint8_t PressedButton();
-		bool DebugMode;
+		RemoteControl(uint8_t IRSensorPin);
+		unsigned long PressedButton();
+		uint8_t Pin;
 
 	private:
-		uint8_t Pin;
-		uint16_t Data[Pulses];
 		uint8_t a;
-		unsigned long PulseIn(unsigned long WaitingTime);
 		unsigned long buffer;
+#ifdef RemoteControlDebug
+		uint16_t High[64];
+		uint16_t Low [64];
+		uint8_t Level;
+		bool GetFrom;
+		uint8_t Bits;
+		void Line();
+		unsigned long Read();
+		void show1(uint8_t times);		
+
+#else
+		uint16_t Data[Pulses];
+#endif
 };
 
 #endif /* REMOTECONTROLS_H_ */

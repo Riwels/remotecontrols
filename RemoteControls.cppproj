@@ -143,6 +143,21 @@
     <None Include="RemoteControls Changelog.txt">
       <SubType>compile</SubType>
     </None>
+    <None Include="wiki\Sample_Arduino_IDE.wiki">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="wiki\Sample_Atmel_Studio.wiki">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="wiki\Sample_Debug_Mode.wiki">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="wiki\Using_RemoteControls.wiki">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wiki" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

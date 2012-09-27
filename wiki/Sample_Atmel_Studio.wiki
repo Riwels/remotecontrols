@@ -22,7 +22,7 @@ It uses the Arduino digital pin 12 for the infrared receiver.
 #include <RemoteControls.cpp>  // INCLUDE .CPP INSTEAD OF .H
 
 RemoteControl rc(12);	// Declaration using pin 12
-uint32_t key;			// Variable to save the key
+uint32_t key;		// Variable to save the key
 
 void setup(){
 	Serial.begin(115200);    //Start serial communication
@@ -30,9 +30,9 @@ void setup(){
 
 void loop(){
 	if(key=rc.PressedButton()){		//	Save the pressed button in "key". 0/False if not pressed
-		Serial.println((uint8_t)a);
-		Serial.println((uint16_t)a);
-		Serial.println((uint32_t)a);
+		Serial.println((uint8_t )key);
+		Serial.println((uint16_t)key);
+		Serial.println((uint32_t)key);
 		Serial.println("---------------------");
 	}
 }

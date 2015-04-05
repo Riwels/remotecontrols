@@ -1,0 +1,29 @@
+# Introduction #
+
+Arduino IDE has a bug with the defines and it makes useless the library as it is.
+I recommend you to switch from ArduinoIDE to Atmel Studio 6.
+
+Atmel Studio 6 can be downloaded for free at Atmel's website.
+http://www.atmel.com/microsite/atmel_studio6/default.aspx
+
+To set it up to work with Arduino, you can check the guides from JayconSystems.
+http://www.jayconsystems.com/tutorial/atmerpt1/	// Part 1
+http://www.jayconsystems.com/tutorial/atmerpt2/	// Part 2
+http://www.jayconsystems.com/tutorial/atmel/	// Part 3
+
+If you need help with the tutorials steps, ask in ths thread:
+http://www.jayconsystems.com/forum/viewtopic.php?f=5&t=66
+
+
+If you want to use it on Arduino IDE anyway, you will need to edit the RemoteControls.h file.
+
+To enable debug mode, uncomment line 12, from:
+`//#define RemoteControlDebug	// ArduinoIDE users, uncomment to set debug mode`
+
+to:
+`#define RemoteControlDebug	// ArduinoIDE users, uncomment to set debug mode`
+
+Then, get your needed values using the Sample\_Debug\_Mode.
+
+Finally, replace the line 12 with your values and the library should be ready to use as any other.
+If you have any problem, report it in Issues or sen an email.

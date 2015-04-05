@@ -1,0 +1,36 @@
+# Introduction #
+
+With this sample, you can see the 8, 16 and 32 bits values for the pressed button, using serial monitor.
+
+It uses the Arduino digital pin 12 for the infrared receiver.
+
+
+# Code #
+
+```
+// Definitions to use in library. Add it BEFORE the library include
+#define Pulses             32		//	To get this values, you
+#define MaxWaitingTime 100000		//	need to start using
+#define FirstPulseLength 4000		//	DebugMode
+#define HighPulseLength  1400
+#define LowPulseLength	  300
+
+#include <Arduino.h>
+#include <RemoteControls.cpp>  // INCLUDE .CPP INSTEAD OF .H
+
+RemoteControl rc(12);	// Declaration using pin 12
+uint32_t key;		// Variable to save the key
+
+void setup(){
+	Serial.begin(115200);    //Start serial communication
+}
+
+void loop(){
+	if(key=rc.PressedButton()){		//	Save the pressed button in "key". 0/False if not pressed
+		Serial.println((uint8_t )key);
+		Serial.println((uint16_t)key);
+		Serial.println((uint32_t)key);
+		Serial.println("---------------------");
+	}
+}
+```

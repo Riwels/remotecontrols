@@ -1,0 +1,39 @@
+# Introduction #
+
+With this sample, you can catch the remote controller protocol and get the needed defines for the library.
+It uses the Arduino digital pin 12 for the infrared receiver.
+Check the output using Atmel Studio's "Terminal Window" or Arduino IDE's "Monitor Serial" and follow the steps.
+
+You must give a slightly lower values than the shown ones. I.E. for a 6100 starting pulse, send 5000.
+For a 1540 pulse, send 1400 and for a 420, send 300.
+
+After give a value, press a button many times till the next step is shown. Don't give 2 times the same value, unless you're sure that the last value was lost.
+
+At the end, copy the given code at the start of your project. (Replacing the RemoteControlDebug's define)
+
+# Code #
+
+```
+//	RemoteControls debug mode sample
+
+//	Define the debug mode
+#define RemoteControlDebug
+
+//	Include libraries
+#include <Arduino.h>
+#include <RemoteControls.cpp>	//	Include the .cpp file, not the .h
+
+
+//	Declare the class
+RemoteControl rc(12);			//	Using pin 12 for the IR receiver
+
+
+void setup(){
+	Serial.begin(115200);		//	Start serial communications
+}
+
+void loop(){
+	rc.PressedButton();			//	Call the function
+}
+
+```
